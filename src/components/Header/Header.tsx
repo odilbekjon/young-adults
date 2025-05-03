@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { navItems } from "@/constants/SidebarMenu";
 import { FaBars } from "react-icons/fa";
+import logo from "../../assets/logo_ya-coloured-black.svg";
 
 
 export const Header = () => {
@@ -15,7 +16,8 @@ export const Header = () => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <h1 className="text-xl font-bold text-blue-900">Young Adults</h1>
+          <img src={logo} width={100} alt="" />
+          {/* <h1 className="text-xl font-bold text-blue-900">Young Adults</h1> */}
         </div>
         <nav className="hidden md:flex items-center gap-6">
           {navItems?.map((item) => (

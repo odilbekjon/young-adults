@@ -7,6 +7,6 @@ export const navItems: Navitems[] = [
   { label: "Bosh sahifa", path: "/" },
   { label: "Biz haqimizda", path: "/about" },
   { label: "Xodimlar", path: "/employees" },
-  { label: "Yutuqlar", path: "/achievements " },
+  { label: "Bizning kurslar", path: "/courses " },  
   { label: "Xizmatlar", path: "/services " },
 ];
