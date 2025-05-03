@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1d1f29] text-white pt-10 pb-6 px-4 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10">
@@ -55,9 +55,9 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold text-yellow-300 mb-3">Aloqa</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Email: <a href="#">info@youngadults.uz</a></li>
-            <li>Tel: <a href="#"> +998 90 123 45 67</a></li>
-            <li>Manzil: Surkhandarya, Uzbekistan</li>
+            <li>Email: <a href="#">youngadultsstudy@gmail.com</a></li>
+            <li>Tel: <a href="#"> +998 91-578-59-30</a></li>
+            <li>Manzil: Surxondaryo viloyati, Jarqurg'on tumani, Qorayantoq MFY</li>
           </ul>
         </div>
       </div>
@@ -78,4 +78,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+
