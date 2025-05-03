@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1d1f29] text-white pt-10 pb-6 px-4 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10">
@@ -77,5 +77,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;
