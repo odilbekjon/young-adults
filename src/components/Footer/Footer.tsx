@@ -22,22 +22,23 @@ export const Footer: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold text-yellow-300 mb-3">IT Kurslar</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="#">Frontend (HTML, CSS, JS)</a></li>
-            <li><a href="#">React.js</a></li>
-            <li><a href="#">Node.js</a></li>
-            <li><a href="#">Python</a></li>
-            <li><a href="#">SQL & Databases</a></li>
+            <li><a href="#">Kompyuter savodxonligi</a></li>
+            <li><a href="#">Frontend dasturlash</a></li>
+            <li><a href="#">Backend dasturlash</a></li>
+            <li><a href="#">Foundation kurs</a></li>
+            <li><a href="#">Co-working hudud</a></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-semibold text-yellow-300 mb-3">Ingliz Tili</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="">Beginner Grammar</a></li>
-            <li><a href="">Speaking Practice</a></li>
-            <li><a href="">IELTS tayyorlov</a></li>
-            <li><a href="">Listening</a></li>
-            <li><a href="">Writing & Reading</a></li>
+            <li><a href="">IELTS</a></li>
+            <li><a href="">CEFR</a></li>
+            <li><a href="">Ingliz tili grammatikasi</a></li>
+            <li><a href="">So'zlashuv</a></li>
+            <li><a href="">Mock Imtihonlari</a></li>
+            <li><a href="">Ona Tili (Milliy sertifikat)</a></li>
           </ul>
         </div>
 
@@ -45,10 +46,9 @@ export const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-yellow-300 mb-3">Foydali Bo'limlar</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li><a href="/info">Biz haqimizda</a></li>
-            <li><a href="#">O'qituvchilar</a></li>
-            <li><a href="#">Kurslar narxlari</a></li>
-            <li><a href="#">Yangi yangiliklar</a></li>
-            <li><a href="/Blog">Blog</a></li>
+            <li><a href="#">Xodimlar</a></li>
+            <li><a href="#">Bizning Kurslar</a></li>
+            <li><a href="#">Xizmatlar</a></li>
           </ul>
         </div>
 
@@ -77,5 +77,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
-
