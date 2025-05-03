@@ -118,3 +118,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
