@@ -1,7 +1,27 @@
+import { AboutData } from "@/constants/About";
+
 export const About = () => (
-    <div className="bg-gradient-to-br from-orange-50 to-white  px-6 py-12 mx-auto">
-        <h1 className="text-center text-[20px] font-bold">
-            Biz haqimizda 
-        </h1>
+  <div
+    id="about"
+    className="bg-gradient-to-br from-orange-50 to-white  px-6 py-12 mx-auto"
+  >
+    <div className="container">
+      <div className="">
+        <h1 className="text-center text-[50px] font-bold">Biz haqimizda</h1>
+      </div>
+
+      <ul  className="flex flex-wrap gap-5">
+        {AboutData.map((item) => {
+          return (
+            <li key={item.id} className="border-orange-400 border-2 p-5 rounded-2xl items-center gap-5 mt-5 max-w-[450px] font-bold">
+              <div className="">{item.image}</div>
+              <p className="text-[20px] mt-5">
+                {item.title}
+              </p>
+            </li>
+          );
+        })}
+      </ul>
     </div>
-)
+  </div>
+);

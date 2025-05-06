@@ -4,9 +4,9 @@ export interface Navitems {
 }
 
 export const navItems: Navitems[] = [
-  { label: "Bosh sahifa", path: "/" },
-  { label: "Biz haqimizda", path: "/about" },
+  { label: "Bosh sahifa", path: "/#" },
+  { label: "Biz haqimizda", path: "/#about" },
   { label: "Xodimlar", path: "/employees" },
-  { label: "Bizning kurslar", path: "/courses " },  
+  { label: "Bizning kurslar", path: "/#courses " },
   { label: "Xizmatlar", path: "/services " },
 ];

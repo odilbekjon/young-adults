@@ -119,6 +119,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 ;
   padding: 0;
@@ -133,11 +137,18 @@ body {
   padding: 0 20px;
 }
 
-.hero {
+.hero-img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.course-image {
   width: 100%;
-  background-image: url('../src/assets/hero.jpg');
-  background-position:   center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 70vh;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }

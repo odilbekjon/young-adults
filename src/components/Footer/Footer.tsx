@@ -10,7 +10,7 @@ import {
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1d1f29] text-white pt-10 pb-6 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10">
         <div>
           <h2 className="text-2xl font-bold text-green-400 mb-4">Young Adults</h2>
           <p className="text-sm text-gray-400">
