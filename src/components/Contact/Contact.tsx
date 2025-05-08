@@ -14,7 +14,7 @@ export const Contact = () => (
     <div className="container">
         <h1 className="text-center text-[40px] font-bold">Biz bilan bog'laning</h1>
 
-        <div className="flex justify-between mt-10">
+        <div className="flex flex-wrap justify-between mt-10 ">
             <div className="left">
                 <h2 className="text-3xl font-bold mb-4">
                 Biz bilan bog‘laning
@@ -32,20 +32,20 @@ export const Contact = () => (
                 <FaTwitterSquare size={35} />
             </div>
             </div>
-            <div className="right">
-                <div className="flex gap-5">
-                    <div className="flex flex-col ">
+            <div className="right lg:mt-0 mt-10">
+                <div className="flex flex-wrap gap-5">
+                    <div className="flex flex-col">
                         <Label className="text-[20px] font-bold" htmlFor="email">Emailingizni kiriting</Label>
-                        <Input id="name" className="w-80 border-2 border-solid border-orange-400 mt-3" placeholder="name" />
+                        <Input id="name" className="w-full border-2 border-solid border-orange-400 mt-3" placeholder="name" />
                     </div>
-                     <div className="flex flex-col ">
+                     <div className="flex flex-col">
                         <Label className="text-[20px] font-bold"  htmlFor="email">Telfon raqamingizni kiriting</Label>
-                        <Input id="name" className="w-80 border-2 border-solid border-orange-400 mt-3" placeholder="+9989" />
+                        <Input id="name" className="w-full border-2 border-solid border-orange-400 mt-3" placeholder="+9989" />
                     </div>
                 </div>
                 <div className="mt-3">
                     <Label className="text-[20px] font-bold"  htmlFor="email">O'z fikiringizni qoldiring</Label>
-                    <Textarea  className="border-2 border-solid border-orange-400 h-30 mt-2 resize-none" placeholder="description" />
+                    <Textarea  className=" border-2 border-solid border-orange-400 h-30 mt-2 resize-none" placeholder="description" />
                 </div>
             </div>
         </div>
