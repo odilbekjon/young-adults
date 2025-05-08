@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "@/assets/hero.jpg"; 
+import Photo1234 from "@/assets/Photo1234.jpg"; 
 import { FaCheckCircle } from "react-icons/fa";
 
 const services = [
@@ -25,7 +25,7 @@ export const Services: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
         <div className="md:w-1/2">
           <img
-            src={hero}
+            src={Photo1234}
             alt="Our Services"
             className="rounded-lg shadow-lg w-full object-cover"
           />
