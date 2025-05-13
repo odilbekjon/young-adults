@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { navItems } from "@/constants/SidebarMenu";
 import { FaBars } from "react-icons/fa";
 import logo from "../../assets/logo_ya-coloured-black.svg";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 
 export const Header = () => {
@@ -29,13 +36,27 @@ export const Header = () => {
         <button className="bg-orange-500 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-full transition duration-200 hover:cursor-pointer">
           Ro'yxatdan o'tish
         </button>
+
+         <Select >
+            <SelectTrigger className="max-w-40 border-2 border-solid border-orange-400 focus:border-orange-400 focus:ring-0 data-[state=open]:border-orange-400">
+              <SelectValue placeholder="O'zbekcha" />
+            </SelectTrigger>
+            <SelectContent className="max-w-40">
+              <SelectItem value="uz">O'zbekcha</SelectItem>
+              <SelectItem value="en">English</SelectItem>
+              <SelectItem value="ru">Русский</SelectItem>
+            </SelectContent>
+          </Select>
+
         </nav>
+
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-orange-500 text-2xl"
         >
           <FaBars />
         </button>
+        
       </div>
 
       {isOpen && (
@@ -52,6 +73,7 @@ export const Header = () => {
           ))}
         </div>
       )}
+  
     </header>
   );
 };
