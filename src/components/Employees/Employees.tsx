@@ -46,7 +46,7 @@ const teamMembers = [
 
 export const Employees = () => {
   return (
-    <section className="bg-white py-10 px-4 sm:px-6 lg:px-20">
+    <section className="bg-orange-50 py-10 px-4 sm:px-6 lg:px-20">
       <Carousel>
         <CarouselContent>
           {teamMembers.map((member, index) => (

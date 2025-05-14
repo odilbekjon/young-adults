@@ -11,8 +11,8 @@ export const Home = () => (
         <Hero/>
         <About/>
         <Employees/>
-        <Courses/>
         <Services/>
+        <Courses/>
         <Achievements/>
         <Contact/>
     </>
