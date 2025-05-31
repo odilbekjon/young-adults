@@ -1,4 +1,3 @@
-// components
 import { Header } from "./components";
 import { Footer } from "./components/Footer/Footer";
 import { Home } from "./pages";

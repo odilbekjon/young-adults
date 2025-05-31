@@ -10,52 +10,42 @@ export const Contact = () => (
         Biz bilan bog'laning
       </h1>
 
-      <div className="flex flex-col lg:flex-row justify-between gap-12">
-        <div className="flex-1">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-800">Biz bilan bog'laning</h2>
-          <p className="text-gray-700 mb-6 max-w-lg text-base sm:text-lg leading-relaxed">
-            Agar sizda savollar bo'lsa yoki kurslarimiz haqida batafsil ma'lumot
-            olishni istasangiz, iltimos quyidagi forma orqali bizga murojaat qiling.
-            Siz bilan imkon qadar tezroq bog'lanamiz.
-          </p>
-
-          <div className="flex gap-4">
-            <FaTelegram size={30} className="text-blue-600 hover:scale-110 transition" />
-            <FaInstagramSquare size={30} className="text-pink-500 hover:scale-110 transition" />
-            <FaFacebook size={30} className="text-blue-800 hover:scale-110 transition" />
-            <FaYoutube size={30} className="text-red-600 hover:scale-110 transition" />
-            <FaTwitterSquare size={30} className="text-sky-500 hover:scale-110 transition" />
+        <div className="flex flex-wrap justify-between mt-10 ">
+            <div className="left">
+                <h2 className="text-3xl font-bold mb-4">
+                Biz bilan bog‘laning
+                </h2>
+                <p className=" text-gray-600 mb-8 max-w-[400px]">
+                Agar sizda savollar bo‘lsa yoki kurslarimiz haqida batafsil ma’lumot
+                olishni istasangiz, iltimos quyidagi forma orqali bizga murojaat
+                qiling. Siz bilan imkon qadar tezroq bog‘lanamiz.
+                </p>
+            <div className="flex gap-5">
+                <FaTelegram size={35} />
+                <FaInstagramSquare size={35} />
+                <FaFacebook size={35} />
+                <FaYoutube size={35} />
+                <FaTwitterSquare size={35} />
+            </div>
+            </div>
+            <div className="right lg:mt-0 mt-10">
+                <div className="flex flex-wrap gap-5">
+                    <div className="flex flex-col">
+                        <Label className="text-[20px] font-bold" htmlFor="email">Emailingizni kiriting</Label>
+                        <Input id="name" className="w-full border-2 border-solid border-orange-400 mt-3" placeholder="name" />
+                    </div>
+                     <div className="flex flex-col">
+                        <Label className="text-[20px] font-bold"  htmlFor="email">Telfon raqamingizni kiriting</Label>
+                        <Input id="name" className="w-full border-2 border-solid border-orange-400 mt-3" placeholder="+9989" />
+                    </div>
+                </div>
+                <div className="mt-3">
+                    <Label className="text-[20px] font-bold"  htmlFor="email">O'z fikiringizni qoldiring</Label>
+                    <Textarea  className=" border-2 border-solid border-orange-400 h-30 mt-2 resize-none" placeholder="description" />
+                </div>
+            </div>
+        </div>
           </div>
         </div>
 
-        <div className="flex-1 bg-white p-6 rounded-xl shadow-lg border border-orange-100">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="flex flex-col">
-              <Label htmlFor="email" className="text-base font-semibold text-gray-800">
-                Emailingizni kiriting
-              </Label>
-              <Input id="email" placeholder="email@example.com" className="mt-2 border-orange-400" />
-            </div>
-            <div className="flex flex-col">
-              <Label htmlFor="phone" className="text-base font-semibold text-gray-800">
-                Telefon raqamingizni kiriting
-              </Label>
-              <Input id="phone" placeholder="+9989" className="mt-2 border-orange-400" />
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <Label htmlFor="message" className="text-base font-semibold text-gray-800">
-              O'z fikringizni qoldiring
-            </Label>
-            <Textarea
-              id="message"
-              placeholder="Fikringizni shu yerga yozing..."
-              className="mt-2 border-orange-400 resize-none h-32"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 );

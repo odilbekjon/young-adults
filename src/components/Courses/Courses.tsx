@@ -11,10 +11,10 @@ export const Courses = () => {
             [id]: !prev[id]
         }));
     };
-
     return (
         <div id="courses" className="bg-gradient-to-br from-orange-50 to-white px-6 py-12 mx-auto">
             <div className="container">
+                <h1 className=" text-[50px] font-bold">Kurslar</h1>
                 <div className="flex flex-wrap gap-10">
                     {
                         CoursesData?.map(course => {
