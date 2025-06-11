@@ -80,7 +80,7 @@ export const Header = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gradient-to-r from-orange-50 to-white px-4 pb-4">
+        <div className="md:hidden bg-white px-4 pb-4 mt-5">
           {navItems.map((item) => (
             <Link
               key={item.label}

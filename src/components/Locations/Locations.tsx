@@ -14,8 +14,8 @@ export const Locations = () => {
         <div className="px-4 py-12">
             <h1 className="text-4xl font-bold mb-4 text-center">Bizning manzillar</h1>
 
-            <div className="flex flex-wrap gap-10">
-                <Card className="w-[500px]">
+            <div className="flex flex-wrap justify-center gap-10">
+                <Card className="w-[450px]">
                     <CardHeader>
                         <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
                         <img className="card-image" src={img} width={500} height={300} alt="" />
@@ -24,10 +24,10 @@ export const Locations = () => {
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
                     </CardContent>
                     <CardFooter>
-                        <p>Telfon raqam:</p>
+                        <p> <b>Telfon raqam:</b> +99890 295 70 07</p>
                     </CardFooter>
                 </Card>
-                <Card className="w-[500px]">
+                <Card className="w-[450px]">
                     <CardHeader>
                         <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
                         <img className="card-image" src={img2} alt="" />
@@ -36,10 +36,10 @@ export const Locations = () => {
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
                     </CardContent>
                     <CardFooter>
-                        <p>Telfon raqam:</p>
+                        <p> <b>Telfon raqam:</b> +99890 295 70 07</p>
                     </CardFooter>
                 </Card>
-                <Card className="w-[500px]">
+                <Card className="w-[450px]">
                     <CardHeader>
                         <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
                         <img className="card-image" src={img} alt="" />
@@ -48,7 +48,7 @@ export const Locations = () => {
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
                     </CardContent>
                     <CardFooter>
-                        <p>Telfon raqam:</p>
+                        <p> <b>Telfon raqam:</b> +99890 295 70 07</p>
                     </CardFooter>
                 </Card>
             </div>

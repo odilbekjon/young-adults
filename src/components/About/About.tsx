@@ -13,8 +13,7 @@ export const About = () => (
       <ul  className="flex flex-wrap gap-5">
         {AboutData.map((item) => {
           return (
-            <li key={item.id} className="border-orange-400 border-2 p-5 flex rounded-2xl items-center gap-5 mt-5 max-w-[450px] font-bold">
-              {/* <div className="text-center">{item.image}</div> */}
+            <li key={item.id} className="border-orange-400 border-2 p-5 flex flex-wrap sm:text-center rounded-2xl items-center gap-5 mt-5 max-w-[450px] font-bold">
               <img src={item.image as string} width={100} alt="" />
               <p className="text-[20px] mt-5">
                 {item.title}
