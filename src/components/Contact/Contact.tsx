@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export const Contact = () => (
-  <div className="bg-gradient-to-br from-orange-50 to-white px-4 py-12">
+  <div className=" px-4 py-12">
     <div className="max-w-7xl mx-auto">
       <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-10">
         Biz bilan bog'laning

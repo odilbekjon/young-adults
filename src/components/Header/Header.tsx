@@ -8,12 +8,18 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
+  // SelectValue,
+} from "@/components/ui/select";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [lang,setLang ] = useState("uz");
+  
+  const flags: Record<string, string> = {
+    uz: "https://flagcdn.com/w40/uz.png",
+    en: "https://flagcdn.com/w40/gb.png",
+    ru: "https://flagcdn.com/w40/ru.png",
+  }
 
   return (
     <header className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md shadow-md sticky top-0 z-50 p-3">
@@ -37,14 +43,28 @@ export const Header = () => {
           Ro'yxatdan o'tish
         </button>
 
-         <Select >
-            <SelectTrigger className="max-w-40 border-2 border-solid border-orange-400 focus:border-orange-400 focus:ring-0 data-[state=open]:border-orange-400">
-              <SelectValue placeholder="O'zbekcha" />
+         <Select value={lang} onValueChange={setLang}>
+            <SelectTrigger className=" border-2 border-solid border-orange-400 focus:border-orange-400 focus:ring-0 data-[state=open]:border-orange-400">
+            <img
+          src={flags[lang]}
+          alt={lang.toUpperCase()}
+          className="w-5 h-4 object-cover"
+        />
+        <span className="uppercase">{lang}</span>
             </SelectTrigger>
-            <SelectContent className="max-w-40">
-              <SelectItem value="uz">O'zbekcha</SelectItem>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="ru">Русский</SelectItem>
+            <SelectContent className="min-w-[2rem]">
+              <SelectItem value="uz" className="flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/uz.png" alt="UZ" className="w-5 h-4 object-cover" />
+                UZ
+                </SelectItem>
+              <SelectItem value="en" className="flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/gb.png" alt="EN" className="w-5 h-4 object-cover" />
+                EN
+                </SelectItem>
+              <SelectItem value="ru" className="flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/ru.png" alt="RU" className="w-5 h-4 object-cover" />
+                RU
+                </SelectItem>
             </SelectContent>
           </Select>
 
