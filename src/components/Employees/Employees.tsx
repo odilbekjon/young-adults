@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { teamMembers } from "@/constants/Employees";
 
 export const Employees = () => {
   const [current, setCurrent] = useState(0);
+  const groupSize = 3;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % Math.ceil(teamMembers.length / 3));
+      setCurrent((prev) => (prev + 1) % Math.ceil(teamMembers.length / groupSize));
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const groupSize = 3;
   const groupedMembers = Array.from({ length: Math.ceil(teamMembers.length / groupSize) }, (_, i) =>
     teamMembers.slice(i * groupSize, i * groupSize + groupSize)
   );
 
   return (
-    <section className="bg-orange-50 py-10 px-4 sm:px-6 lg:px-20">
+    <section id="employees" className="px-4 sm:px-6 lg:px-20">
+      <h2 className="text-center lg:text-[40px] text-[30px] font-bold">Xodimlar</h2>
       <Carousel className="relative">
         <CarouselContent
           className="transition-transform duration-700 ease-in-out"
@@ -31,25 +31,15 @@ export const Employees = () => {
                 {group.map((member, idx) => (
                   <div
                     key={idx}
-                    className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center min-h-[500px]"
+                    className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition"
                   >
                     <img
                       src={typeof member.image === "string" ? member.image : ""}
                       alt={member.name}
-                      className="w-[200px] h-[260px] object-cover rounded-xl mb-4"
+                      className="w-32 h-32 object-cover rounded-full border-4 border-orange-500 mb-4"
                     />
-                    <h3 className="text-xl font-bold text-blue-900">{member.name}</h3>
-                    <p className="text-blue-600 text-sm mb-1">{member.role}</p>
-                    <p className="text-gray-700 text-sm mb-1">{member.birth}</p>
-                    <p className="text-gray-700 text-sm mb-4">{member.description1}</p>
-                    <Link
-                      to={`/team/${member.slug || member.name.toLowerCase().replace(/ /g, "-")}`}
-                      className="mt-auto"
-                    >
-                      <div className="bg-blue-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                        More about {member.name}
-                      </div>
-                    </Link>
+                    <h3 className="text-lg font-semibold text-orange-500">{member.name}</h3>
+                    <p className="text-orange-500 text-sm">{member.role}</p>
                   </div>
                 ))}
               </div>

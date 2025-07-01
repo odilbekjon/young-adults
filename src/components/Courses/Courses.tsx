@@ -12,9 +12,9 @@ export const Courses = () => {
         }));
     };
     return (
-        <div id="courses" className="bg-gradient-to-br from-orange-50 to-white px-6 py-12 mx-auto">
+        <div id="courses" className=" px-6 py-12 mx-auto">
             <div className="container">
-                <h1 className=" text-[50px] font-bold">Kurslar</h1>
+                <h1 className="text-center lg:text-[50px] text-[30px] font-bold">Kurslar</h1>
                 <div className="flex flex-wrap gap-10">
                     {
                         CoursesData?.map(course => {
@@ -25,10 +25,10 @@ export const Courses = () => {
                                 : course.description.slice(0, maxLength) + (isLong ? "..." : "");
 
                             return (
-                                <div key={course.id} className="shadow-lg shadow-orange-400 rounded-2xl p-4 max-w-[400px] h-full flex flex-col">
-                                    <img className="course-image" src={course.image} width={400} height={200} alt={course.name} />
-                                    <h2 className="text-[25px] font-bold my-5">{course.name}</h2>
-                                    <p className="max-w-[450px]">{displayedText}</p>
+                                <div key={course.id} className="shadow-lg shadow-orange-400 rounded-2xl p-4 max-w-[400px] h-full flex flex-wrap flex-col justify-center mx-auto">
+                                    <img className="course-image" src={course.image} width={200} height={200} alt={course.name} />
+                                    <h2 className="text-[25px] font-bold my-5 text-center">{course.name}</h2>
+                                    <p className="max-w-[450px] text-center">{displayedText}</p>
 
                                     {isLong && (
                                         <button
@@ -39,7 +39,7 @@ export const Courses = () => {
                                         </button>
                                     )}
 
-                                    <div className="bg-orange-400 p-4 text-white rounded-2xl text-center text-[20px] font-bold mt-auto hover:cursor-pointer">
+                                    <div className="bg-orange-400 p-2 text-white rounded-2xl text-center text-[20px] font-bold mt-auto hover:cursor-pointer">
                                         Kursga yozilish
                                     </div>
                                 </div>

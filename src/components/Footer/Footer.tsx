@@ -36,7 +36,6 @@ export const Footer: React.FC = () => {
             <li><a href="">IELTS</a></li>
             <li><a href="">CEFR</a></li>
             <li><a href="">Ingliz tili grammatikasi</a></li>
-            <li><a href="">So'zlashuv</a></li>
             <li><a href="">Mock Imtihonlari</a></li>
             <li><a href="">Ona Tili (Milliy sertifikat)</a></li>
           </ul>
@@ -45,9 +44,10 @@ export const Footer: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold text-yellow-300 mb-3">Foydali Bo'limlar</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="/info">Biz haqimizda</a></li>
+            <li><a href="#about">Bosh sahifa</a></li>
+            <li><a href="#about">Biz haqimizda</a></li>
             <li><a href="#">Xodimlar</a></li>
-            <li><a href="#">Bizning Kurslar</a></li>
+            <li><a href="#courses"> Kurslar</a></li>
             <li><a href="#">Xizmatlar</a></li>
           </ul>
         </div>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-700 pt-4 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-4">
+      <div className="border-t border-gray-700 pt-4 mt-5 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-4">
         <div className="flex space-x-4 text-xl text-gray-400">
           <a href="#"> <FaYoutube className="hover:text-red-500 cursor-pointer" /></a>
           <a href="#"><FaLinkedin className="hover:text-blue-400 cursor-pointer" /></a>
