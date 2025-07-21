@@ -2,14 +2,26 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { navItems } from "@/constants/SidebarMenu";
 import { FaBars } from "react-icons/fa";
-import logo from "../../assets/logo_ya-coloured-black.svg";
+import { IoPersonSharp } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMailUnread } from "react-icons/io";
+import logo from "../../assets/Rectangle_3980_bg_removed_deep.svg";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  // SelectValue,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +35,12 @@ export const Header = () => {
 
   return (
     <header className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md shadow-md sticky top-0 z-50 p-3">
+
       <div className="container  mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/#"
           className="flex items-center gap-2 cursor-pointer" 
         >
-          <img src={logo} width={100} alt="" />
+          <img src={logo} width={150} alt="" />
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {navItems?.map((item,index) => (
@@ -38,10 +51,40 @@ export const Header = () => {
               {item.label}
             </a>
           ))}
-        
-        <button className="bg-orange-500 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-full transition duration-200 hover:cursor-pointer">
-          Ro'yxatdan o'tish
-        </button>
+
+        <Dialog>
+          <DialogTrigger>
+            <button className="bg-orange-500 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-full transition duration-200 hover:cursor-pointer">
+              Ro'yxatdan o'tish
+            </button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+               <DialogTitle className="text-center text-[25px]">Ro'yxatdan o’tish</DialogTitle>
+            </DialogHeader>
+              <DialogDescription >
+                  <div className="">
+                    <IoPersonSharp className="relative left-2 top-7 mt-2"  size={20}/>
+                    <Input className="pl-10" placeholder="Ism" type="text" />
+                  </div>
+                  <div className="">
+                    <IoPersonSharp className="relative left-2 top-7 mt-2"  size={20}/>
+                    <Input className="pl-10" placeholder="Familya" type="text" />
+                  </div>
+                  <div className="">
+                    <FaPhone className="relative left-2 top-7 mt-2"  size={20}/>
+                    <Input className="pl-10" placeholder="Telfon raqam" type="text" />
+                  </div>
+                  <div className="">
+                    <IoMdMailUnread className="relative left-2 top-7"  size={20}/>
+                    <Input className="pl-10" placeholder="Email" type="text" />
+                  </div>
+                  <Button className="bg-orange-500 w-full mt-5 text-center font-bold text-[15px]">Ro'yxatdan o'tish</Button>
+              </DialogDescription>
+          </DialogContent>
+        </Dialog>
+
+
 
          <Select value={lang} onValueChange={setLang}>
             <SelectTrigger className=" border-2 border-solid border-orange-400 focus:border-orange-400 focus:ring-0 data-[state=open]:border-orange-400">
