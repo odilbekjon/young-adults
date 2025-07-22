@@ -5,6 +5,9 @@ import { FaBars } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMailUnread } from "react-icons/io";
+import { RiInstagramFill } from "react-icons/ri";
+import { CiFacebook } from "react-icons/ci";
+import { FaTelegram } from "react-icons/fa";
 import logo from "../../assets/Rectangle_3980_bg_removed_deep.svg";
 import {
   Select,
@@ -34,8 +37,19 @@ export const Header = () => {
   }
 
   return (
-    <header className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md shadow-md sticky top-0 z-50 p-3">
-
+   <section className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md pt-4">
+        <div className=" bg-green-900 flex justify-between items-center">
+            <div className="bg-[#FF6900] max-w-100 p-3 flex items-center gap-5">
+              <span className="text-white text-[12px] font-bold uppercase">Ijtimoiy tarmoqlarimiz</span>
+              <div className="flex gap-2">
+                 <a href=""> <FaTelegram  size={25} color="" /> </a>
+                 <a href=""> <CiFacebook  size={25} color="" /> </a>
+                 <a href=""> <RiInstagramFill size={25} color="" /> </a>
+              </div>
+            </div>
+              <a className="text-white font-bold mr-10" href="">youngadults@gmail.com</a>
+        </div>
+       <header className=" shadow-md sticky top-0 z-50 p-3">
       <div className="container  mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/#"
           className="flex items-center gap-2 cursor-pointer" 
@@ -138,5 +152,6 @@ export const Header = () => {
       )}
   
     </header>
+   </section>
   );
 };
