@@ -8,7 +8,8 @@ import { IoMdMailUnread } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { CiFacebook } from "react-icons/ci";
 import { FaTelegram } from "react-icons/fa";
-import logo from "../../assets/Rectangle_3980_bg_removed_deep.svg";
+import { SiGmail } from "react-icons/si";
+import logo from "../../assets/photo_2025-07-28_10-42-28.svg";
 import {
   Select,
   SelectContent,
@@ -47,14 +48,17 @@ export const Header = () => {
                  <a href=""> <RiInstagramFill size={25} color="" /> </a>
               </div>
             </div>
-              <a className="text-white font-bold mr-10" href="">youngadults@gmail.com</a>
+              <div className="flex items-center gap-3">
+                <div className="bg-[#FF6900] p-1 rounded-2xl"> <SiGmail />  </div>
+                <a className="text-white font-bold mr-10" href="">youngadults@gmail.com</a>
+              </div>
         </div>
        <header className=" shadow-md sticky top-0 z-50 p-3">
       <div className="container  mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/#"
           className="flex items-center gap-2 cursor-pointer" 
         >
-          <img src={logo} width={150} alt="" />
+          <img src={logo} width={150} height={50} alt="logo" />
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {navItems?.map((item,index) => (

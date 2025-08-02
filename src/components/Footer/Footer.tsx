@@ -7,12 +7,16 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import logo from "../../assets/photo_2025-07-28_10-42-28.svg";
+
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1d1f29] text-white pt-10 pb-6 px-4 md:px-10">
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10">
         <div>
-          <h2 className="text-2xl font-bold text-green-400 mb-4">Young Adults</h2>
+          <a className="mb-10 block" href="#">
+            <img className="" src={logo} width={150} height={50} alt="logo" />
+          </a>
           <p className="text-sm text-gray-400">
             IT va Ingliz tili bo'yicha mukammal ta'lim platformasi.
             Zamonaviy bilimlar bilan kelajagingizni quramiz.

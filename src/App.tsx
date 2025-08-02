@@ -1,6 +1,9 @@
 import { Header } from "./components";
 import { Footer } from "./components/Footer/Footer";
 import { Home } from "./pages";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function App() {
 

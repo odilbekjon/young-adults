@@ -7,9 +7,16 @@
     "compilerOptions": {
     "moduleResolution": "node",
     "esModuleInterop": true,
+     "module": "ESNext",
+    "target": "ES6",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   }
 }
+
