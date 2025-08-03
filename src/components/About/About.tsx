@@ -20,10 +20,10 @@ export const About = () => (
           <div className="left grid grid-cols-2">
               <img src={img1} width={'340'} height={'500'} alt="image" />
               <img className="ml-5" src={img2} width={'315'} height={'315'} alt="image" />
-              <div className="w-[220px] h-[80px] flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-tl-full rounded-tr-full rounded-br-full shadow-md transition-all">
-                <img className="bg-white p-1 rounded-full" src={img4} width={50} height={50}  alt="person" />
-                <span className="font-bold">Telegram orqali savol  yolash</span>
-              </div>
+                <div className="w-[250px] h-[100px] flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 ml-10 rounded-tl-full rounded-tr-full rounded-br-full shadow-md transition-all">
+                    <img className="bg-white p-1 rounded-full" src={img4} width={50} height={50}  alt="person" />
+                    <span className="font-bold">Telegram orqali savol  yolash</span>
+                </div>
               <img className="ml-10 mt-[-80px]" src={img3} width={'340'} height={'345'} alt="image" />
           </div>
           <div className="right ">
