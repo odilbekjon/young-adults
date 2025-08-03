@@ -13,7 +13,7 @@ export const About = () => (
   >
     <div className="container">
       <div className="">
-        <h1 className="text-center lg:text-[50px] text-[30px] font-bold">Biz haqimizda</h1>
+        <h1 className="text-center lg:text-[50px] text-[30px] font-bold text-orange-500 ">Biz haqimizda</h1>
       </div>
 
       <div  className="flex flex-wrapp gap-50 mt-10">

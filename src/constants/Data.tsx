@@ -19,7 +19,7 @@ export const data = [
     },
     {
       icon: <FaUsers size={80} color="white" />,
-      count: 3,
+      count: 4,
       label: 'Filiallar soni',
     },
   ];

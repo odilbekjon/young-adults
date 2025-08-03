@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CoursesData } from "@/constants";
+import { FaClock } from "react-icons/fa6";
 
 export const Courses = () => {
     const maxLength = 180;
@@ -11,10 +12,11 @@ export const Courses = () => {
             [id]: !prev[id]
         }));
     };
+
     return (
         <div id="courses" className=" px-6 py-12 mx-auto">
             <div className="container">
-                <h1 className="text-center lg:text-[50px] text-[30px] font-bold">Kurslar</h1>
+                <h1 className="text-center lg:text-[50px] text-[30px] font-bold text-orange-500 mb-10">Kurslarimiz</h1>
                 <div className="flex flex-wrap gap-10">
                     {
                         CoursesData?.map(course => {
@@ -25,21 +27,31 @@ export const Courses = () => {
                                 : course.description.slice(0, maxLength) + (isLong ? "..." : "");
 
                             return (
-                                <div key={course.id} className="shadow-lg shadow-orange-400 rounded-2xl p-4 max-w-[400px] h-full flex flex-wrap flex-col justify-center mx-auto">
+                                <div key={course.id} className="shadow-lg border-2 border-solid border-orange-500 rounded-2xl p-4 max-w-[400px] h-full flex flex-wrap flex-col justify-center mx-auto">
                                     <img className="course-image" src={course.image} width={200} height={200} alt={course.name} />
-                                    <h2 className="text-[25px] font-bold my-5 text-center">{course.name}</h2>
-                                    <p className="max-w-[450px] text-center">{displayedText}</p>
+                                    <h2 className="text-[25px] font-bold my-5">{course.name}</h2>
 
-                                    {isLong && (
-                                        <button
-                                            onClick={() => toggleShowMore(course.id)}
-                                            className="text-blue-600 my-2 text-left"
-                                        >
-                                            {isExpanded ? "Yopish" : "Davomini o‘qish"}
-                                        </button>
-                                    )}
+                                    <div className="flex items-center gap-10">
+                                        <div className="flex items-center gap-5">
+                                            <img className="rounded-full" width={50} height={50}  src={course.teacherImage} alt="teacher" />
+                                            <span className="">{course.teacher}</span>
+                                        </div>
 
-                                    <div className="bg-orange-400 p-2 text-white rounded-2xl text-center text-[20px] font-bold mt-auto hover:cursor-pointer">
+                                        {isLong && (
+                                            <button
+                                                onClick={() => toggleShowMore(course.id)}
+                                                className="my-2 text-left px-4 py-2 bg-gray-400 rounded-2xl text-white"
+                                            >
+                                                {isExpanded ? "Yopish" : "Ko'proq"}
+                                            </button>
+                                        )}
+                                    </div>
+
+                                    <p className="max-w-[450px] my-3">{displayedText}</p>
+                                    <span className="mb-2 flex items-center gap-3"><FaClock size={20} color="#156C63" /> Davomiylgi: <b className="text-[#156C63]">{course.time}</b></span>
+
+
+                                    <div className="bg-[#FF6900] p-2 text-white rounded-2xl text-center text-[20px] font-bold mt-auto hover:cursor-pointer">
                                         Kursga yozilish
                                     </div>
                                 </div>

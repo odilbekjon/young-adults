@@ -19,7 +19,7 @@ export const Employees = () => {
 
   return (
     <section id="employees" className="px-4 sm:px-6 lg:px-20">
-      <h2 className="text-center lg:text-[40px] text-[30px] font-bold">Xodimlar</h2>
+      <h2 className="text-center lg:text-[40px] text-[30px] font-bold text-orange-500 mb-10">Xodimlarimiz</h2>
       <Carousel className="relative">
         <CarouselContent
           className="transition-transform duration-700 ease-in-out"
@@ -31,7 +31,7 @@ export const Employees = () => {
                 {group.map((member, idx) => (
                   <div
                     key={idx}
-                    className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition"
+                    className="border-2 border-orange-500 border-solid rounded-xl p-6 flex flex-col items-center text-center hover:shadow-xl transition"
                   >
                     <img
                       src={typeof member.image === "string" ? member.image : ""}
