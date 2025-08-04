@@ -18,7 +18,7 @@ export const Employees = () => {
   );
 
   return (
-    <section id="employees" className="px-4 sm:px-6 lg:px-20">
+    <section id="employees" className="px-4 sm:px-6 lg:px-20 mb-20">
       <h2 className="text-center lg:text-[40px] text-[30px] font-bold text-orange-500 mb-10">Xodimlarimiz</h2>
       <Carousel className="relative">
         <CarouselContent

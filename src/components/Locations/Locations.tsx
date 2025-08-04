@@ -12,8 +12,7 @@ import img2 from "../../assets/filial2.jpg";
 export const Locations = () => {
     return(
         <div className="px-4 py-12">
-            <h1 className="text-4xl font-bold mb-4 text-center">Bizning manzillar</h1>
-
+            <h1 className="text-4xl font-bold mb-4 text-center text-orange-500">Bizning manzillar</h1>
             <div className="flex flex-wrap justify-center gap-10">
                 <Card className="w-[450px]">
                     <CardHeader>
@@ -29,7 +28,7 @@ export const Locations = () => {
                 </Card>
                 <Card className="w-[450px]">
                     <CardHeader>
-                        <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
+                        <CardTitle className="text-3xl mb-2">Istiqlol ko'chasi</CardTitle>
                         <img className="card-image" src={img2} alt="" />
                     </CardHeader>
                     <CardContent>
