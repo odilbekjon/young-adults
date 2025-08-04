@@ -38,7 +38,7 @@ export const Contact = () => (
                       Biz bilan bog‘laning – har qanday savollaringizga mamnuniyat bilan javob beramiz! 😊
                     </p>
                     <a href="https://www.google.com/maps/place/Young+Adults/@37.5088102,67.4222738,16.57z/data=!4m6!3m5!1s0x38cab3d53610b179:0x61a07dfa91acc6a8!8m2!3d37.5092822!4d67.4212738!16s%2Fg%2F11s2plj3zg?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="font-bold text-center text-[25px] my-5 block">Xaritadan ko’rish</a>
-                    <div className="p-2 bg-blue-700 flex items-center justify-center gap-5 text-white rounded-lg font-bold"><BiLogoTelegram size={30} color="white" /> Telegram orqali bog'lanish</div>
+                    <a href="https://t.me/rasulbek_jurabekugli" target="_blank" className="p-2 bg-blue-700 flex items-center justify-center gap-5 text-white rounded-lg font-bold"><BiLogoTelegram size={30} color="white" /> Telegram orqali bog'lanish</a>
                 {/* <div className="flex gap-5">
                     <FaInstagramSquare size={35} />
                     <FaFacebook size={35} />
