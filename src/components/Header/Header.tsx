@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { navItems } from "@/constants/SidebarMenu";
+// import { navItems } from "@/constants/SidebarMenu";
 import { FaBars } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
@@ -26,10 +26,17 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
+  const { t, i18n } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
-  const [lang,setLang ] = useState("uz");
+  const [lang,setLang ] = useState("ru");
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
   
   const flags: Record<string, string> = {
     uz: "https://flagcdn.com/w40/uz.png",
@@ -37,11 +44,20 @@ export const Header = () => {
     ru: "https://flagcdn.com/w40/ru.png",
   }
 
+  const navItems = [
+    { label: t("headerTitle1"), path: "/" },
+    { label: t("headerTitle2"), path: "/about" },
+    { label: t("headerTitle3"), path: "/courses" },
+    { label: t("headerTitle4"), path: "/staff" },
+    { label: t("headerTitle5"), path: "/services" },
+  ];
+
+
   return (
    <section className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md pt-4">
         <div className=" bg-green-900 flex justify-between items-center">
             <div className="bg-[#FF6900] max-w-100 p-3 flex items-center gap-5">
-              <span className="text-white text-[12px] font-bold uppercase">Ijtimoiy tarmoqlarimiz</span>
+              <span className="text-white text-[12px] font-bold uppercase">{t("socialMedia")}</span>
               <div className="flex gap-2">
                  <a href=""> <FaTelegram  size={25} color="" /> </a>
                  <a href=""> <CiFacebook  size={25} color="" /> </a>
@@ -73,7 +89,7 @@ export const Header = () => {
         <Dialog>
           <DialogTrigger>
             <button className="bg-orange-500 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-full transition duration-200 hover:cursor-pointer">
-              Ro'yxatdan o'tish
+              {t("signup")}
             </button>
           </DialogTrigger>
           <DialogContent>
@@ -107,11 +123,11 @@ export const Header = () => {
          <Select value={lang} onValueChange={setLang}>
             <SelectTrigger className=" border-2 border-solid border-orange-400 focus:border-orange-400 focus:ring-0 data-[state=open]:border-orange-400">
             <img
-          src={flags[lang]}
-          alt={lang.toUpperCase()}
-          className="w-5 h-4 object-cover"
-        />
-        <span className="uppercase">{lang}</span>
+                src={flags[lang]}
+                alt={lang.toUpperCase()}
+                className="w-5 h-4 object-cover"
+              />
+              <span className="uppercase">{lang}</span>
             </SelectTrigger>
             <SelectContent className="min-w-[2rem]">
               <SelectItem value="uz" className="flex items-center gap-2">
