@@ -16,9 +16,13 @@ import { Button } from "@/components/ui/button"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
+import { useTranslation } from 'react-i18next';
+
 
 
 export const Hero = () =>   {
+  const { t } = useTranslation();
+
   return(
     <div className="relative">
       <Swiper
@@ -43,24 +47,24 @@ export const Hero = () =>   {
             <img src={youngAdults} alt="" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
               <div className="container mx-auto px-6 text-white">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Biz bilan kelajagingizni yarating!</h1>
-                <p className="text-xl max-w-xl mb-6">IT va Ingliz tili kurslarimizga xush kelibsiz!</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("heroTitle1")}</h1>
+                <p className="text-xl max-w-xl mb-6">{t("heroTitle2")}</p>
                 <Dialog>
                   <DialogTrigger>
                     <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-xl">
-                      Ro'yxatdan o'ting
+                      {t("signup")}
                     </button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
-                      <DialogTitle className="text-center text-[25px]">Ro'yxatdan o’tish</DialogTitle>
+                      <DialogTitle className="text-center text-[25px]">{t("signup")}</DialogTitle>
                     </DialogHeader>
                     <DialogDescription>
                       <div className=""><IoPersonSharp className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Ism" /></div>
                       <div className=""><IoPersonSharp className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Familya" /></div>
                       <div className=""><FaPhone className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Telfon raqam" /></div>
                       <div className=""><IoMdMailUnread className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Email" /></div>
-                      <Button className="bg-orange-500 w-full mt-5 text-center font-bold text-[15px]">Ro'yxatdan o'tish</Button>
+                      <Button className="bg-orange-500 w-full mt-5 text-center font-bold text-[15px]">{t("signup")}</Button>
                     </DialogDescription>
                   </DialogContent>
                 </Dialog>
@@ -79,24 +83,24 @@ export const Hero = () =>   {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
               <div className="container mx-auto px-6 text-white">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Young Adults jamiyatiga qo‘shiling!</h1>
-                <p className="text-xl max-w-xl mb-6">Yoshlar uchun zamonaviy ta’lim platformasi.</p>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("heroTitle3")}</h2>
+                <p className="text-xl max-w-xl mb-6">{t("heroTitle4")}</p>
                 <Dialog>
                   <DialogTrigger>
                     <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-xl">
-                      Ro'yxatdan o'ting
+                      {t("signup")}
                     </button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
-                      <DialogTitle className="text-center text-[25px]">Ro'yxatdan o’tish</DialogTitle>
+                      <DialogTitle className="text-center text-[25px]">{t("signup")}</DialogTitle>
                     </DialogHeader>
                     <DialogDescription>
                       <div className=""><IoPersonSharp className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Ism" /></div>
                       <div className=""><IoPersonSharp className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Familya" /></div>
                       <div className=""><FaPhone className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Telfon raqam" /></div>
                       <div className=""><IoMdMailUnread className="relative left-2 top-7 mt-2" size={20} /><Input className="pl-10" placeholder="Email" /></div>
-                      <Button className="bg-orange-500 w-full mt-5 text-center font-bold text-[15px]">Ro'yxatdan o'tish</Button>
+                      <Button className="bg-orange-500 w-full mt-5 text-center font-bold text-[15px]">{t("signup")}</Button>
                     </DialogDescription>
                   </DialogContent>
                 </Dialog>
