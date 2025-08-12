@@ -16,7 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { useTranslation } from 'react-i18next';
 
-// import video from "../../assets/rasulbek.mp4";
+import video from "../../assets/massiv.mp4";
 
 
 
@@ -24,28 +24,26 @@ export const Hero = () =>   {
   const { t } = useTranslation();
 
   return(
-    <div className="relative">
-      <Swiper
+    <div className="relative mt-10">
+      <Swiper 
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         className="w-full h-[80vh]"
       >
-        {/* SLIDE 1 - VIDEO */}
         <SwiperSlide>
           <div className="w-full h-full relative">
-            {/* <video
+            <video
               src={video}
               autoPlay
               loop
               muted
               className="w-full h-full object-cover"
-            /> */}
-            <img src={youngAdults} alt="" />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
+            />
+            <div className=" bg-black bg-opacity-40 flex items-center">
               <div className="container mx-auto px-6 text-white">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("heroTitle1")}</h1>
                 <p className="text-xl max-w-xl mb-6">{t("heroTitle2")}</p>
@@ -73,7 +71,6 @@ export const Hero = () =>   {
           </div>
         </SwiperSlide>
 
-        {/* SLIDE 2 - IMAGE */}
         <SwiperSlide>
           <div className="w-full h-full relative">
             <img
@@ -81,7 +78,7 @@ export const Hero = () =>   {
               alt="Young Adults"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
+            <div className=" bg-black bg-opacity-40 flex items-center">
               <div className="container mx-auto px-6 text-white">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("heroTitle3")}</h2>
                 <p className="text-xl max-w-xl mb-6">{t("heroTitle4")}</p>

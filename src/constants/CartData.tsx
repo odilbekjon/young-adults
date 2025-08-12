@@ -1,4 +1,5 @@
-import React from 'react'; // ba'zida kerak bo‘ladi, lekin yangi versiyalarda emas
+import React from 'react'; 
+
 
 import {
   FaNewspaper,
@@ -14,6 +15,7 @@ interface CardItem {
 }
 
 export const CardData: CardItem[] = [
+  
   {
     icon: <FaNewspaper size={32} />,
     title: "So‘ngi yangiliklar",
