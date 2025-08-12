@@ -6,20 +6,15 @@ import travel from "../../assets/travel.svg";
 const Services = () => {
   return (
     <section id="services" className="bg-blue-950 text-white py-12 px-4 sm:px-6 lg:px-1 mt-10">
-      <div className="container">
-        <div className="flex items-center gap-10">
-           <img src={travel} width={218} height={218} alt="travel"/>
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+           <img className="w-[150px] sm:w-[180px] lg:w-[218px]" src={travel} width={218} height={218} alt="travel"/>
             <div className="">
-              <h2 className="max-w-[800px] text-[70px] text-left  font-bold mb-4 uppercase">
+              <h2 className="text-left text-[32px] sm:text-[48px] lg:text-[70px] font-bold uppercase leading-tight max-w-[800px]">
                 Bizning konsalting xizmatlarimiz
               </h2>
-              {/* <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-                Biz sizga ta'lim, til o'rganish va chet eldagi imkoniyatlar bo'yicha to‘liq
-                yo'naltirish beramiz.
-              </p> */}
             </div>
         </div>
-
         <div className="mt-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {countries.map((country) => (
@@ -45,7 +40,6 @@ const Services = () => {
           </div>
         </div>
       </div> 
-      {/* end of container */}
   </section>
   )
 }

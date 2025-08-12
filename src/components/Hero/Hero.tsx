@@ -12,11 +12,11 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-
 import { useTranslation } from 'react-i18next';
+
+// import video from "../../assets/rasulbek.mp4";
 
 
 
@@ -38,7 +38,7 @@ export const Hero = () =>   {
         <SwiperSlide>
           <div className="w-full h-full relative">
             {/* <video
-              src={""}
+              src={video}
               autoPlay
               loop
               muted

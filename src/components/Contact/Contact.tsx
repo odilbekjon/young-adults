@@ -1,7 +1,5 @@
-// import { FaTelegram, FaInstagramSquare, FaFacebook, FaYoutube, FaTwitterSquare } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
 import { Input } from "@/components/ui/input";
-// import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
@@ -15,10 +13,10 @@ export const Contact = () => (
         <div className="flex flex-wrap justify-around mt-10 ">
             <div className="left lg:mt-0 mt-10">
                   <div className="flex flex-wrap gap-5">
-                      <div className="flex flex-col">
+                      <div className="w-full flex flex-col">
                         <Input  className="w-full border-2 border-solid border-blue-700 mt-3" placeholder="Name" />
                       </div>
-                      <div className="flex flex-col">
+                      <div className="w-full flex flex-col">
                         <Input  className="w-full border-2 border-solid border-blue-700 mt-3" placeholder="Telfon raqam" />
                       </div>
                   </div>
@@ -28,7 +26,7 @@ export const Contact = () => (
                   <div className="mt-3">
                     <Textarea  className=" border-2 border-solid border-blue-700 h-30 mt-2 resize-none" placeholder="savollaringizni yo'llang" />
                   </div>
-                    <Button className="mt-5 bg-blue-700 text-white w-full" >Jo'natish</Button>
+                    <Button className="mt-5 mb-5 lg:mb-0 bg-blue-700 text-white w-full " >Jo'natish</Button>
               </div>
               <div className="right border-2 border-solid border-blue-700 p-5 rounded-2xl">
                     <p className="mb-2"> <b>Manzil:</b> O‘zbekiston, Toshkent shahri, Mustaqillik ko‘chasi, 12-uy</p>
@@ -39,12 +37,7 @@ export const Contact = () => (
                     </p>
                     <a href="https://www.google.com/maps/place/Young+Adults/@37.5088102,67.4222738,16.57z/data=!4m6!3m5!1s0x38cab3d53610b179:0x61a07dfa91acc6a8!8m2!3d37.5092822!4d67.4212738!16s%2Fg%2F11s2plj3zg?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="font-bold text-center text-[25px] my-5 block">Xaritadan ko’rish</a>
                     <a href="https://t.me/rasulbek_jurabekugli" target="_blank" className="p-2 bg-blue-700 flex items-center justify-center gap-5 text-white rounded-lg font-bold"><BiLogoTelegram size={30} color="white" /> Telegram orqali bog'lanish</a>
-                {/* <div className="flex gap-5">
-                    <FaInstagramSquare size={35} />
-                    <FaFacebook size={35} />
-                    <FaYoutube size={35} />
-                    <FaTwitterSquare size={35} />
-                </div> */}
+                
               </div>
         </div>
           </div>

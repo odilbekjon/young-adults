@@ -16,8 +16,8 @@ export const About = () => (
         <h1 className="text-center lg:text-[50px] text-[30px] font-bold text-orange-500 ">Biz haqimizda</h1>
       </div>
 
-      <div  className="flex flex-wrapp gap-50 mt-10">
-          <div className="left grid grid-cols-2">
+      <div  className="flex  gap-50 mt-10">
+          <div className="left grid grid-cols-2 hidden sm:grid">
               <img src={img1} width={'340'} height={'500'} alt="image" />
               <img className="ml-5" src={img2} width={'315'} height={'315'} alt="image" />
                 <div className="w-[250px] h-[100px] flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 ml-10 rounded-tl-full rounded-tr-full rounded-br-full shadow-md transition-all">
@@ -27,8 +27,8 @@ export const About = () => (
               <img className="ml-10 mt-[-80px]" src={img3} width={'340'} height={'345'} alt="image" />
           </div>
           <div className="right ">
-            <h2 className="max-w-[831px] text-[40px] font-bold leading-[57px]">Young Adults – bilim, ishonch va muvaffaqiyat <span className="text-orange-500">markazi!</span> </h2>
-            <p className="max-w-[767px] mt-5">🎓 Young Adults o‘quv markazi 2017-yilda tashkil etilgan bo‘lib, hozirgi kunga kelib 3 ta filial va 1 ta zamonaviy IT markaziga ega. Markazimiz bugunga qadar <b className="text-orange-500">5000</b> dan ortiq bitiruvchini yetishtirib, tumandagi yagona yirik qo‘shimcha ta’lim muassasasi sifatida tan olingan. Hozirda <b className="text-orange-500">1300</b> dan ortiq o‘quvchi tahsil olmoqda va ular orasida 80% dan ziyodi ingliz tilidan B2 yoki undan yuqori natijalarga erishgan. Shuningdek, 500 dan ortiq bitiruvchilarimiz dunyoning eng nufuzli — top <b className="text-orange-500">1000</b> talik oliygohlarida o‘qishni davom ettirishmoqda.</p>
+            <h2 className="max-w-[831px] text-[24px] leading-[32px] sm:text-[40px] sm:leading-[57px] font-bold">Young Adults – bilim, ishonch va muvaffaqiyat <span className="text-orange-500">markazi!</span> </h2>
+            <p className="max-w-[767px] mt-5 text-sm sm:text-base">🎓 Young Adults o‘quv markazi 2017-yilda tashkil etilgan bo‘lib, hozirgi kunga kelib 3 ta filial va 1 ta zamonaviy IT markaziga ega. Markazimiz bugunga qadar <b className="text-orange-500">5000</b> dan ortiq bitiruvchini yetishtirib, tumandagi yagona yirik qo‘shimcha ta’lim muassasasi sifatida tan olingan. Hozirda <b className="text-orange-500">1300</b> dan ortiq o‘quvchi tahsil olmoqda va ular orasida 80% dan ziyodi ingliz tilidan B2 yoki undan yuqori natijalarga erishgan. Shuningdek, 500 dan ortiq bitiruvchilarimiz dunyoning eng nufuzli — top <b className="text-orange-500">1000</b> talik oliygohlarida o‘qishni davom ettirishmoqda.</p>
           <div className="mt-10 flex gap-5 items-center">
             <img className="rounded-[50%]" src={img5} width={50} alt="Yong-Adults" />
               <div className="">

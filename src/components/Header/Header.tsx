@@ -55,10 +55,10 @@ export const Header = () => {
 
   return (
    <section className="bg-gradient-to-r from-orange-50 to-white backdrop-blur-md pt-4">
-        <div className=" bg-green-900 flex justify-between items-center">
-            <div className="bg-[#FF6900] max-w-100 p-3 flex items-center gap-5">
-              <span className="text-white text-[12px] font-bold uppercase">{t("socialMedia")}</span>
-              <div className="flex gap-2">
+        <div className=" bg-green-900 flex flex-wrap justify-between items-center">
+            <div className="bg-[#FF6900] max-w-100 p-5 flex items-center gap-5">
+              <span className="text-white text-[12px] font-bold uppercase hidden sm:flex">{t("socialMedia")}</span>
+              <div className="flex gap-2 hidden sm:flex">
                  <a href=""> <FaTelegram  size={25} color="" /> </a>
                  <a href=""> <CiFacebook  size={25} color="" /> </a>
                  <a href=""> <RiInstagramFill size={25} color="" /> </a>

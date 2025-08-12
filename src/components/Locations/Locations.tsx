@@ -6,8 +6,9 @@ import {
     CardTitle,
   } from "@/components/ui/card";
 
-import img from "../../assets/young-adults2.png";
-import img2 from "../../assets/filial2.jpg";
+import newUzbekistan from "../../assets/young-adults2.png";
+import istiqlolBranch from "../../assets/istiqlolBranch.jpg";
+import grammarCampus from "../../assets/grammarCampus.jpg";
 
 export const Locations = () => {
     return(
@@ -17,7 +18,7 @@ export const Locations = () => {
                 <Card className="w-[450px]">
                     <CardHeader>
                         <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
-                        <img className="card-image" src={img} width={500} height={300} alt="" />
+                        <img className="card-image" src={newUzbekistan} width={500} height={300} alt="" />
                     </CardHeader>
                     <CardContent>
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
@@ -29,7 +30,7 @@ export const Locations = () => {
                 <Card className="w-[450px]">
                     <CardHeader>
                         <CardTitle className="text-3xl mb-2">Istiqlol ko'chasi</CardTitle>
-                        <img className="card-image" src={img2} alt="" />
+                        <img className="card-image" src={istiqlolBranch} alt="" />
                     </CardHeader>
                     <CardContent>
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
@@ -40,8 +41,8 @@ export const Locations = () => {
                 </Card>
                 <Card className="w-[450px]">
                     <CardHeader>
-                        <CardTitle className="text-3xl mb-2">Yangi O'zbekiston</CardTitle>
-                        <img className="card-image" src={img} alt="" />
+                        <CardTitle className="text-3xl mb-2">Grammar Campus</CardTitle>
+                        <img className="card-image" src={grammarCampus} alt="" />
                     </CardHeader>
                     <CardContent>
                         <p><b>Ish vaqti:</b> 09:00 - 20:00</p>
